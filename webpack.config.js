@@ -2,13 +2,14 @@ const path = require('path');
 
 module.exports = {
   entry: {
-    app1: './app1/src/index.js',
-    app2: './app2/src/index.js',
+    app1: './exclude/app1/src/index.js',
+    app2: './exclude/app2/src/index.js',
   },
   output: {
     path: path.resolve(__dirname, 'dist'),
     filename: '[name].v1.js',
   },
+  mode: 'production',
   module: {
     rules: [
       {
